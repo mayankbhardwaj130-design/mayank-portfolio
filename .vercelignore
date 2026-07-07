@@ -1,0 +1,61 @@
+# ---------------------------------------------
+# Dependencies (Vercel installs fresh)
+# ---------------------------------------------
+node_modules
+frontend/node_modules
+.yarn/cache
+.yarn/unplugged
+
+# ---------------------------------------------
+# Local env files (set these in Vercel dashboard)
+# ---------------------------------------------
+.env
+.env.local
+frontend/.env
+frontend/.env.local
+backend/.env
+backend/.env.local
+
+# ---------------------------------------------
+# Build artifacts (regenerated during deploy)
+# ---------------------------------------------
+frontend/build
+build
+dist
+out
+.cache
+
+# ---------------------------------------------
+# Python caches / virtualenvs
+# ---------------------------------------------
+__pycache__
+*.pyc
+*.pyo
+.venv
+venv
+env
+.pytest_cache
+.mypy_cache
+.ruff_cache
+
+# ---------------------------------------------
+# Logs, tests, docs & tooling not needed at runtime
+# ---------------------------------------------
+logs
+*.log
+coverage
+.coverage
+htmlcov
+tests
+test_reports
+scripts
+memory
+
+# ---------------------------------------------
+# Editor / OS files
+# ---------------------------------------------
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+*.swp
