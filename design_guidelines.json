@@ -1,0 +1,156 @@
+{
+  "theme": "light",
+  "archetype": "Archetype 4 (Swiss & High-Contrast) + Archetype 5 (Luxury)",
+  "rationale": "The website requires a premium, high-end digital marketing agency feel. By combining Swiss typography principles (clarity, authority, large scale) with Luxury surface treatments (glassmorphism, generous negative space, refined borders), we establish Mayank Bhardwaj as a top-tier consultant for USA/Canada clients, while maintaining the brand colors requested.",
+  "colors": {
+    "primary": {
+      "DEFAULT": "#2563EB",
+      "hover": "#1D4ED8",
+      "foreground": "#FFFFFF",
+      "description": "Main action color for primary CTAs (Book Strategy Call). Trustworthy and energetic blue."
+    },
+    "secondary": {
+      "DEFAULT": "#111827",
+      "foreground": "#F9FAFB",
+      "description": "Deep navy/charcoal for bold typography in light mode, and base background in dark mode."
+    },
+    "accent": {
+      "DEFAULT": "#14B8A6",
+      "foreground": "#FFFFFF",
+      "description": "Teal for data metrics, highlights, active states, and secondary visual flair. Do not use for primary CTAs."
+    },
+    "background": {
+      "light": "#FFFFFF",
+      "light_muted": "#F9FAFB",
+      "dark": "#030712",
+      "dark_muted": "#111827"
+    },
+    "surface": {
+      "light": "#FFFFFF",
+      "dark": "#1F2937",
+      "border_light": "#E5E7EB",
+      "border_dark": "#374151"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Outfit, sans-serif",
+      "body": "Plus Jakarta Sans, sans-serif"
+    },
+    "hierarchy": {
+      "h1": "text-5xl md:text-6xl tracking-tighter font-semibold leading-tight",
+      "h2": "text-3xl md:text-4xl tracking-tight font-medium leading-snug",
+      "h3": "text-xl md:text-2xl font-medium",
+      "body": "text-base leading-relaxed text-gray-600 dark:text-gray-300",
+      "overline": "text-xs md:text-sm uppercase tracking-[0.2em] text-accent font-semibold"
+    }
+  },
+  "layout_and_spacing": {
+    "section_padding": "py-24 md:py-32",
+    "container": "max-w-7xl mx-auto px-6 md:px-12",
+    "grid_bento": "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8",
+    "general": "Use generous negative space to feel premium. Sections should breathe. Images should not exceed 80vh on mobile."
+  },
+  "surface_strategies": {
+    "glassmorphism_nav": "backdrop-blur-xl bg-white/70 dark:bg-gray-950/70 border-b border-gray-200/50 dark:border-gray-800/50",
+    "cards": "bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-2xl p-8 shadow-sm transition-all duration-300",
+    "cards_hover": "hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-900/5 dark:hover:shadow-blue-900/20 hover:border-blue-200 dark:hover:border-blue-800"
+  },
+  "motion_and_interactions": {
+    "framer_motion": true,
+    "entrance": "Staggered fade-up (y: 20, opacity: 0 -> y: 0, opacity: 1) for lists and grids. Duration: 0.5s, ease: easeOut.",
+    "hover_states": "All interactive elements must explicitly change state. Buttons scale down slightly (scale: 0.98) on tap.",
+    "smooth_scroll": "Implement smooth scrolling for anchor links to enhance the premium feel."
+  },
+  "components": {
+    "required_shadcn": ["button", "input", "textarea", "card", "accordion", "form", "sheet"],
+    "icons_library": "lucide-react",
+    "implementation_rules": [
+      "Use strictly .js extension for React components, no TypeScript.",
+      "Add data-testid attributes to all interactive elements (buttons, inputs, links).",
+      "Avoid centering text entirely. Use left-alignment for dense content and cards. Center alignment is only for short section intros.",
+      "Do not use transparent backgrounds for the sticky header; apply the defined glassmorphism strategy."
+    ]
+  },
+  "sections": [
+    {
+      "name": "Navigation",
+      "type": "Sticky Header",
+      "details": "Logo left. Desktop links center. Right: Dark/Light toggle and 'Book Call' CTA. Mobile: Hamburger menu via Shadcn Sheet."
+    },
+    {
+      "name": "Hero",
+      "type": "Asymmetrical Split",
+      "details": "Left: Overline 'Digital Marketing Consultant', H1 'Helping Businesses Grow with SEO, AI Search & High-Converting Websites'. Subheading describing traffic and Google Ads. CTAs: Primary Blue 'Book a Free Strategy Call', Outline 'View My Work'. Right: Professional portrait overlapping a subtle gradient blob (Blue/Teal)."
+    },
+    {
+      "name": "Services",
+      "type": "Bento Grid",
+      "details": "8 Services (SEO, AI Search Optimization, Google Ads, Web Dev, Web Redesign, Tech SEO, Local SEO, Audits). Cards with top-left icon (lucide-react), H3, and short description. Apply cards_hover strategy."
+    },
+    {
+      "name": "Case Studies",
+      "type": "Premium Cards",
+      "details": "3 Cards highlighting metrics. High contrast typography. Use accent Teal for the large metric numbers (e.g., '+150%'). Add abstract data images at the top of the cards."
+    },
+    {
+      "name": "About",
+      "type": "Side-by-side",
+      "details": "Left: Image of modern workspace/meeting. Right: Text detailing 4+ years freelance, based in Delhi, serving USA/Canada, focus on measurable growth."
+    },
+    {
+      "name": "Testimonials",
+      "type": "Slider/Grid",
+      "details": "6 client testimonials. Minimalist cards with client name, role, and quote. Aesthetically clean."
+    },
+    {
+      "name": "Pricing",
+      "type": "Tier Cards",
+      "details": "4 Tiers: SEO Starter $99/mo, SEO Growth $299/mo (Highlight this one with a subtle Primary border/glow), Web Dev $799, Web Redesign $499. Use Check icons for features."
+    },
+    {
+      "name": "FAQ",
+      "type": "Accordion",
+      "details": "Shadcn Accordion centered layout. Clean borders."
+    },
+    {
+      "name": "Blog",
+      "type": "Grid",
+      "details": "3 recent articles. Minimalist preview cards with date, title, and 'Read more' link."
+    },
+    {
+      "name": "Contact & CTA Banner",
+      "type": "Split Form + Info",
+      "details": "CTA Banner: 'Ready to dominate your market?'. Left column: hello@mayankbhardwaj.com, WhatsApp and LinkedIn buttons. Right column: Shadcn Form (Name, Email, Message) with 'Send Message' button."
+    },
+    {
+      "name": "Footer",
+      "type": "Minimal",
+      "details": "Copyright 2026 Mayank Bhardwaj. Subtle gray background."
+    }
+  ],
+  "media": {
+    "images": {
+      "hero_portrait": {
+        "url": "https://images.unsplash.com/photo-1729157661483-ed21901ed892?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBpbmRpYW4lMjBtYW4lMjBzbWlsaW5nJTIwcG9ydHJhaXQlMjBzdHVkaW98ZW58MHx8fHwxNzgzNDQ1Mzk1fDA&ixlib=rb-4.1.0&q=85",
+        "description": "Professional Indian man leaning against wall, representing Mayank."
+      },
+      "case_study_1": {
+        "url": "https://images.pexels.com/photos/27141316/pexels-photo-27141316.jpeg",
+        "description": "Abstract futuristic data graph in low light."
+      },
+      "case_study_2": {
+        "url": "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74",
+        "description": "Monitoring screen with charts."
+      },
+      "case_study_3": {
+        "url": "https://images.pexels.com/photos/27141307/pexels-photo-27141307.jpeg",
+        "description": "Sleek futuristic digital interface."
+      },
+      "about_section": {
+        "url": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+        "description": "Modern office workspace."
+      }
+    }
+  }
+}
