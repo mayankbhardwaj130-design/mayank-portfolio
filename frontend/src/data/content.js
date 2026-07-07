@@ -5,6 +5,7 @@ import {
 export const NAV_LINKS = [
   { label: "Services", href: "#services" },
   { label: "Case Studies", href: "#case-studies" },
+  { label: "Portfolio", href: "#portfolio" },
   { label: "About", href: "#about" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "Pricing", href: "#pricing" },
@@ -60,6 +61,57 @@ export const PRICING = [
   { name: "SEO Starter", price: "$99", period: "/month", featured: false, features: ["Keyword research & strategy", "On-page SEO optimization", "Technical SEO basics", "Monthly performance report", "Email support"], cta: "Get Started" },
   { name: "SEO Growth", price: "$199", period: "/month", featured: true, features: ["Everything in Starter", "Content strategy & clusters", "Link building outreach", "Local SEO optimization", "Bi-weekly reporting", "Priority support"], cta: "Get Started" },
   { name: "SEO Advanced", price: "$299", period: "/month", featured: false, features: ["Everything in Growth", "AI Search optimization (AEO/GEO)", "Advanced technical SEO", "CRO & conversion tracking", "Dedicated strategy calls", "24/7 priority support"], cta: "Get Started" },
+];
+
+export const CALENDLY_URL = "https://calendly.com/mayankbhardwaj130/30min";
+export const WHATSAPP_URL = "https://wa.me/919557817966";
+
+export const SEO_PROJECTS = [
+  {
+    title: "B2B SaaS Organic Growth",
+    result: "+212% Traffic",
+    desc: "Technical SEO overhaul and content clusters that tripled organic sessions in 8 months.",
+    tags: ["Technical SEO", "Content"],
+    image: "https://images.pexels.com/photos/27141316/pexels-photo-27141316.jpeg",
+  },
+  {
+    title: "Local Service Domination",
+    result: "40+ #1 Keywords",
+    desc: "Local SEO campaign that captured the Google map pack across three metro areas.",
+    tags: ["Local SEO", "GBP"],
+    image: "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74",
+  },
+  {
+    title: "E-commerce Revenue Lift",
+    result: "+68% Conversions",
+    desc: "Combined SEO and CRO program that grew qualified traffic and conversion rate together.",
+    tags: ["E-commerce", "CRO"],
+    image: "https://images.pexels.com/photos/27141307/pexels-photo-27141307.jpeg",
+  },
+];
+
+export const WEB_PROJECTS = [
+  {
+    name: "Landfair Electric & Paint",
+    type: "Website Development",
+    url: "https://landfairelectricandpaint.com/",
+    desc: "A clean, conversion-focused website for an electrical & painting services company.",
+    image: "https://s.wp.com/mshots/v1/https%3A%2F%2Flandfairelectricandpaint.com%2F?w=1200&h=900",
+  },
+  {
+    name: "TintXperts",
+    type: "Website Development",
+    url: "https://tintxxperts.com/",
+    desc: "A bold, modern site for an automotive & architectural window tinting business.",
+    image: "https://s.wp.com/mshots/v1/https%3A%2F%2Ftintxxperts.com%2F?w=1200&h=900",
+  },
+  {
+    name: "Susan Quinn",
+    type: "Website Redesign",
+    url: "https://susanquinn.net/",
+    desc: "A refined redesign delivering a professional, trustworthy personal brand presence.",
+    image: "https://s.wp.com/mshots/v1/https%3A%2F%2Fsusanquinn.net%2F?w=1200&h=900",
+  },
 ];
 
 export const FAQS = [

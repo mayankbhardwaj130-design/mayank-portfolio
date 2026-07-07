@@ -5,7 +5,9 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import ThemeToggle from "@/components/ThemeToggle";
-import { NAV_LINKS } from "@/data/content";
+import { NAV_LINKS, CALENDLY_URL } from "@/data/content";
+
+const openCalendly = () => window.open(CALENDLY_URL, "_blank", "noopener,noreferrer");
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -67,7 +69,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <ThemeToggle />
           <Button
-            onClick={() => handleNav("#contact")}
+            onClick={openCalendly}
             data-testid="nav-book-call-btn"
             className="hidden sm:inline-flex rounded-full bg-primary hover:bg-primary/90 px-5"
           >
@@ -94,7 +96,7 @@ export default function Navbar() {
                   </SheetClose>
                 ))}
                 <SheetClose asChild>
-                  <Button onClick={() => handleNav("#contact")} className="mt-4 rounded-full bg-primary" data-testid="mobile-book-call-btn">
+                  <Button onClick={openCalendly} className="mt-4 rounded-full bg-primary" data-testid="mobile-book-call-btn">
                     Book a Free Strategy Call
                   </Button>
                 </SheetClose>

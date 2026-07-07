@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { CALENDLY_URL } from "@/data/content";
 
-const scrollTo = (id) => document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
+const openCalendly = () => window.open(CALENDLY_URL, "_blank", "noopener,noreferrer");
 
 export default function CTABanner() {
   return (
@@ -25,7 +26,7 @@ export default function CTABanner() {
               Book a free strategy call and let&apos;s map out a clear plan to grow your traffic, rankings, and revenue.
             </p>
             <Button
-              onClick={() => scrollTo("#contact")}
+              onClick={openCalendly}
               data-testid="cta-banner-btn"
               size="lg"
               className="mt-8 rounded-full bg-primary hover:bg-primary/90 px-8 h-12 text-base group"

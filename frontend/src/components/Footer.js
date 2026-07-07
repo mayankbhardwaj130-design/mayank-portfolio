@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { TrendingUp, Mail, Linkedin, MessageCircle } from "lucide-react";
+import { TrendingUp, MessageCircle, CalendarDays } from "lucide-react";
+import { CALENDLY_URL, WHATSAPP_URL } from "@/data/content";
 
 export default function Footer() {
   return (
@@ -31,14 +32,11 @@ export default function Footer() {
           <div>
             <h4 className="font-heading font-semibold mb-4">Get in touch</h4>
             <div className="flex flex-col gap-3 text-sm">
-              <a href="mailto:hello@mayankbhardwaj.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors" data-testid="footer-email">
-                <Mail className="h-4 w-4" /> hello@mayankbhardwaj.com
-              </a>
-              <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors" data-testid="footer-whatsapp">
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-accent transition-colors" data-testid="footer-whatsapp">
                 <MessageCircle className="h-4 w-4" /> WhatsApp
               </a>
-              <a href="https://linkedin.com/in/mayankbhardwaj" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors" data-testid="footer-linkedin">
-                <Linkedin className="h-4 w-4" /> LinkedIn
+              <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors" data-testid="footer-calendly">
+                <CalendarDays className="h-4 w-4" /> Book a Strategy Call
               </a>
             </div>
           </div>

@@ -4,6 +4,7 @@ import axios from "axios";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { CALENDLY_URL } from "@/data/content";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
@@ -61,7 +62,7 @@ export default function BlogDetail() {
         <div className="mt-14 p-8 rounded-2xl bg-secondary/50 border border-border text-center">
           <h3 className="font-heading text-xl font-semibold mb-2">Want results like these for your business?</h3>
           <p className="text-muted-foreground mb-5">Book a free strategy call and let&apos;s talk growth.</p>
-          <Link to="/#contact"><Button className="rounded-full bg-primary hover:bg-primary/90" data-testid="blog-cta-btn">Book a Free Strategy Call</Button></Link>
+          <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer"><Button className="rounded-full bg-primary hover:bg-primary/90" data-testid="blog-cta-btn">Book a Free Strategy Call</Button></a>
         </div>
       </div>
     </main>

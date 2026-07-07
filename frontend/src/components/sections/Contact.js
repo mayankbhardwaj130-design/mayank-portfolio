@@ -2,11 +2,12 @@ import { useState } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
-import { Mail, MessageCircle, Linkedin, CalendarDays, Loader2 } from "lucide-react";
+import { MessageCircle, CalendarDays, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
+import { CALENDLY_URL, WHATSAPP_URL } from "@/data/content";
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 
@@ -52,23 +53,15 @@ export default function Contact() {
           </p>
 
           <div className="space-y-4">
-            <a href="mailto:hello@mayankbhardwaj.com" data-testid="contact-email-link" className="flex items-center gap-3 bg-card border border-border rounded-xl p-4 hover:border-primary/40 transition-colors">
-              <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary"><Mail className="h-5 w-5" /></span>
-              <div><p className="text-sm font-medium">Email</p><p className="text-sm text-muted-foreground">hello@mayankbhardwaj.com</p></div>
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" data-testid="contact-whatsapp-btn" className="flex items-center gap-3 bg-card border border-border rounded-xl p-4 hover:border-accent/50 transition-colors">
+              <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-accent"><MessageCircle className="h-5 w-5" /></span>
+              <div><p className="text-sm font-medium">WhatsApp</p><p className="text-sm text-muted-foreground">Chat with me directly</p></div>
             </a>
-            <div className="grid grid-cols-2 gap-4">
-              <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" data-testid="contact-whatsapp-btn" className="flex items-center gap-2 bg-card border border-border rounded-xl p-4 hover:border-accent/50 transition-colors">
-                <MessageCircle className="h-5 w-5 text-accent" /><span className="text-sm font-medium">WhatsApp</span>
-              </a>
-              <a href="https://linkedin.com/in/mayankbhardwaj" target="_blank" rel="noopener noreferrer" data-testid="contact-linkedin-btn" className="flex items-center gap-2 bg-card border border-border rounded-xl p-4 hover:border-primary/40 transition-colors">
-                <Linkedin className="h-5 w-5 text-primary" /><span className="text-sm font-medium">LinkedIn</span>
-              </a>
-            </div>
 
-            {/* Calendly integration placeholder */}
-            <a href="https://calendly.com/mayankbhardwaj/strategy-call" target="_blank" rel="noopener noreferrer" data-testid="calendly-placeholder" className="flex items-center gap-3 rounded-xl border-2 border-dashed border-primary/40 bg-primary/5 p-4 hover:bg-primary/10 transition-colors">
+            {/* Calendly integration */}
+            <a href={CALENDLY_URL} target="_blank" rel="noopener noreferrer" data-testid="calendly-link" className="flex items-center gap-3 rounded-xl border-2 border-dashed border-primary/40 bg-primary/5 p-4 hover:bg-primary/10 transition-colors">
               <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground"><CalendarDays className="h-5 w-5" /></span>
-              <div><p className="text-sm font-medium">Book a Free Strategy Call</p><p className="text-xs text-muted-foreground">Schedule via Calendly</p></div>
+              <div><p className="text-sm font-medium">Book a Free Strategy Call</p><p className="text-xs text-muted-foreground">Schedule a 30-min call via Calendly</p></div>
             </a>
           </div>
         </motion.div>

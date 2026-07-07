@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Star, TrendingUp, Search, MousePointerClick, BarChart3 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { CALENDLY_URL } from "@/data/content";
 
 const scrollTo = (id) => document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
+const openCalendly = () => window.open(CALENDLY_URL, "_blank", "noopener,noreferrer");
 
 export default function Hero() {
   return (
@@ -25,7 +27,7 @@ export default function Hero() {
           </p>
           <div className="mt-9 flex flex-col sm:flex-row gap-4">
             <Button
-              onClick={() => scrollTo("#contact")}
+              onClick={openCalendly}
               data-testid="hero-book-call-btn"
               size="lg"
               className="rounded-full bg-primary hover:bg-primary/90 px-7 h-12 text-base group"
@@ -34,7 +36,7 @@ export default function Hero() {
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Button>
             <Button
-              onClick={() => scrollTo("#case-studies")}
+              onClick={() => scrollTo("#portfolio")}
               data-testid="hero-view-work-btn"
               size="lg"
               variant="outline"
