@@ -3,7 +3,7 @@ import { Check, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PRICING } from "@/data/content";
 
-const scrollTo = (id) => document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
+const openWise = (url) => window.open(url, "_blank", "noopener,noreferrer");
 
 export default function Pricing() {
   return (
@@ -48,7 +48,7 @@ export default function Pricing() {
                 ))}
               </ul>
               <Button
-                onClick={() => scrollTo("#contact")}
+                onClick={() => openWise(p.wiseUrl)}
                 data-testid={`pricing-cta-${i}`}
                 className={`w-full rounded-full ${p.featured ? "bg-primary hover:bg-primary/90" : "bg-secondary text-foreground hover:bg-secondary/70 border border-border"}`}
               >

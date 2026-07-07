@@ -58,9 +58,9 @@ export const TESTIMONIALS = [
 ];
 
 export const PRICING = [
-  { name: "SEO Starter", price: "$99", period: "/month", featured: false, features: ["Keyword research & strategy", "On-page SEO optimization", "Technical SEO basics", "Monthly performance report", "Email support"], cta: "Get Started" },
-  { name: "SEO Growth", price: "$199", period: "/month", featured: true, features: ["Everything in Starter", "Content strategy & clusters", "Link building outreach", "Local SEO optimization", "Bi-weekly reporting", "Priority support"], cta: "Get Started" },
-  { name: "SEO Advanced", price: "$299", period: "/month", featured: false, features: ["Everything in Growth", "AI Search optimization (AEO/GEO)", "Advanced technical SEO", "CRO & conversion tracking", "Dedicated strategy calls", "24/7 priority support"], cta: "Get Started" },
+  { name: "SEO Starter", price: "$99", period: "/month", featured: false, wiseUrl: "https://wise.com/pay/r/CjY9VQK9B2CukhY", features: ["Keyword research & strategy", "On-page SEO optimization", "Technical SEO basics", "Monthly performance report", "Email support"], cta: "Get Started" },
+  { name: "SEO Growth", price: "$199", period: "/month", featured: true, wiseUrl: "https://wise.com/pay/r/EWKUhztvqOpLccI", features: ["Everything in Starter", "Content strategy & clusters", "Link building outreach", "Local SEO optimization", "Bi-weekly reporting", "Priority support"], cta: "Get Started" },
+  { name: "SEO Advanced", price: "$299", period: "/month", featured: false, wiseUrl: "https://wise.com/pay/r/37tcsrOUy_mPMb4", features: ["Everything in Growth", "AI Search optimization (AEO/GEO)", "Advanced technical SEO", "CRO & conversion tracking", "Dedicated strategy calls", "24/7 priority support"], cta: "Get Started" },
 ];
 
 export const CALENDLY_URL = "https://calendly.com/mayankbhardwaj130/30min";
