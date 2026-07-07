@@ -1,0 +1,23 @@
+{
+  "summary": "First-finish smoke test for Mayank Bhardwaj marketing site. Backend (5/5) and frontend (8/8 critical flows) all pass. Blog seeded with 3 posts, contact form persists to Mongo, theme toggle switches to dark, testimonials slider rotates, FAQ accordion expands, blog list/detail navigation works, contact form submits with success toast.",
+  "tested_scope": ["frontend", "backend", "integration"],
+  "passed": [
+    "GET /api/ returns {message: 'Mayank Bhardwaj API'} (200)",
+    "GET /api/blog returns 3 seeded posts with expected slugs",
+    "GET /api/blog/{valid-slug} returns 200 with content; invalid slug returns 404",
+    "POST /api/contact (200) stores contact and returns id+created_at; GET /api/contact confirms persistence",
+    "POST /api/contact did not fail request even with Emergent Resend email flow",
+    "Home page loads with all sections (hero-section, services-section, case-studies-section, about, testimonials, pricing, faq, blog-preview, cta-banner, contact)",
+    "Theme toggle switches html class from light to dark",
+    "Testimonial next button rotates testimonial content",
+    "FAQ accordion first item transitions data-state from closed to open on click",
+    "Contact form submits with valid data and shows success toast",
+    "/blog route lists 3 blog cards; clicking navigates to /blog/{slug} detail page with content"
+  ],
+  "failed": [],
+  "action_items": [],
+  "success_rate": {"backend": "100%", "frontend": "100%"},
+  "retest_needed": false,
+  "full_testing_deferred": true,
+  "notes": "Section IDs used data-testid convention (hero-section, blog-preview, etc.) rather than raw #hero — verified via DOM enumeration. Mobile menu (Sheet) and Navbar smooth-scroll not explicitly tested but nav testids exist (mobile-menu-btn, nav-* buttons)."
+}
