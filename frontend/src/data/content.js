@@ -57,10 +57,9 @@ export const TESTIMONIALS = [
 ];
 
 export const PRICING = [
-  { name: "SEO Starter", price: "$99", period: "/month", featured: false, features: ["Keyword research & strategy", "On-page optimization", "Monthly reporting", "Technical SEO basics"], cta: "Get Started" },
-  { name: "SEO Growth", price: "$299", period: "/month", featured: true, features: ["Everything in Starter", "Content strategy & clusters", "Link building", "AI search (AEO/GEO)", "Priority support"], cta: "Get Started" },
-  { name: "Website Development", price: "$799", period: " starting", featured: false, features: ["Custom responsive design", "SEO-ready architecture", "Conversion-focused build", "Speed optimized"], cta: "Request Quote" },
-  { name: "Website Redesign", price: "$499", period: " starting", featured: false, features: ["UX & CRO audit", "Modern premium redesign", "Migration & QA", "Performance tuning"], cta: "Request Quote" },
+  { name: "SEO Starter", price: "$99", period: "/month", featured: false, features: ["Keyword research & strategy", "On-page SEO optimization", "Technical SEO basics", "Monthly performance report", "Email support"], cta: "Get Started" },
+  { name: "SEO Growth", price: "$199", period: "/month", featured: true, features: ["Everything in Starter", "Content strategy & clusters", "Link building outreach", "Local SEO optimization", "Bi-weekly reporting", "Priority support"], cta: "Get Started" },
+  { name: "SEO Advanced", price: "$299", period: "/month", featured: false, features: ["Everything in Growth", "AI Search optimization (AEO/GEO)", "Advanced technical SEO", "CRO & conversion tracking", "Dedicated strategy calls", "24/7 priority support"], cta: "Get Started" },
 ];
 
 export const FAQS = [

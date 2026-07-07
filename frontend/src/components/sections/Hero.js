@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight, Star, TrendingUp, Search, MousePointerClick, BarChart3 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const scrollTo = (id) => document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
@@ -58,23 +58,66 @@ export default function Hero() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
           className="relative"
+          data-testid="hero-visual"
         >
-          <div className="relative rounded-3xl overflow-hidden border border-border shadow-2xl shadow-blue-900/10">
-            <img
-              src="https://images.unsplash.com/photo-1729157661483-ed21901ed892?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzMjh8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBpbmRpYW4lMjBtYW4lMjBzbWlsaW5nJTIwcG9ydHJhaXQlMjBzdHVkaW98ZW58MHx8fHwxNzgzNDQ1Mzk1fDA&ixlib=rb-4.1.0&q=85"
-              alt="Mayank Bhardwaj, Digital Marketing Consultant"
-              className="w-full h-[420px] md:h-[540px] object-cover"
-            />
+          <div className="relative rounded-3xl border border-border bg-card/80 backdrop-blur-xl shadow-2xl shadow-blue-900/10 p-6 md:p-8">
+            <div className="flex items-center justify-between mb-6">
+              <div>
+                <p className="text-xs text-muted-foreground">Organic Traffic</p>
+                <p className="font-heading text-2xl font-bold">48,920</p>
+              </div>
+              <span className="inline-flex items-center gap-1 rounded-full bg-accent/10 text-accent text-xs font-semibold px-3 py-1">
+                <TrendingUp className="h-3.5 w-3.5" /> +212%
+              </span>
+            </div>
+
+            <div className="flex items-end justify-between gap-2 h-40 md:h-48">
+              {[35, 48, 42, 60, 55, 72, 68, 88, 95].map((h, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ height: 0 }}
+                  animate={{ height: `${h}%` }}
+                  transition={{ duration: 0.7, delay: 0.4 + i * 0.07, ease: "easeOut" }}
+                  className="flex-1 rounded-t-md"
+                  style={{ background: "linear-gradient(to top, #2563EB, #14B8A6)" }}
+                />
+              ))}
+            </div>
+            <div className="mt-3 flex justify-between text-[10px] text-muted-foreground">
+              <span>Jan</span><span>Mar</span><span>May</span><span>Jul</span><span>Sep</span>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4 mt-6">
+              <div className="rounded-xl border border-border bg-secondary/40 p-4">
+                <div className="flex items-center gap-2 text-muted-foreground mb-1"><Search className="h-4 w-4" /><span className="text-xs">Keywords Ranked</span></div>
+                <p className="font-heading text-xl font-bold">1,240</p>
+              </div>
+              <div className="rounded-xl border border-border bg-secondary/40 p-4">
+                <div className="flex items-center gap-2 text-muted-foreground mb-1"><MousePointerClick className="h-4 w-4" /><span className="text-xs">Conversion Rate</span></div>
+                <p className="font-heading text-xl font-bold text-accent">6.8%</p>
+              </div>
+            </div>
           </div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 0.6 }}
             className="absolute -bottom-5 -left-5 bg-card border border-border rounded-2xl p-4 shadow-xl"
             data-testid="hero-stat-card"
           >
             <p className="font-heading text-2xl font-bold text-primary">4+ yrs</p>
             <p className="text-xs text-muted-foreground">Freelance experience</p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.75 }}
+            className="absolute -top-5 -right-3 hidden sm:flex items-center gap-2 bg-card border border-border rounded-2xl px-4 py-3 shadow-xl"
+          >
+            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-accent/10 text-accent"><BarChart3 className="h-4 w-4" /></span>
+            <div><p className="text-xs font-semibold leading-none">Page 1</p><p className="text-[10px] text-muted-foreground mt-1">Google Rankings</p></div>
           </motion.div>
         </motion.div>
       </div>
