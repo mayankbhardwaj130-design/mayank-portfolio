@@ -10,7 +10,22 @@ export default function BlogPreview() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    axios.get(`${API}/blog`).then((r) => setPosts(r.data.slice(0, 3))).catch(() => {});
+    axios.get(`${API}/blog`)
+  .then((r) => {
+    console.log("API Response:", r.data);
+
+    const data = Array.isArray(r.data)
+      ? r.data
+      : Array.isArray(r.data.posts)
+      ? r.data.posts
+      : [];
+
+    setPosts(data.slice(0, 3));
+  })
+  .catch((err) => {
+    console.error(err);
+    setPosts([]);
+  });
   }, []);
 
   return (
