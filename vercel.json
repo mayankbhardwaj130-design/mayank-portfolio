@@ -1,19 +1,33 @@
 {
   "version": 2,
+
+  "functions": {
+    "backend/server.py": {
+      "runtime": "@vercel/python"
+    }
+  },
+
   "builds": [
     {
       "src": "frontend/package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "build" }
-    },
-    {
-      "src": "backend/server.py",
-      "use": "@vercel/python"
+      "config": {
+        "distDir": "build"
+      }
     }
   ],
+
   "routes": [
-    { "src": "/api/(.*)", "dest": "backend/server.py" },
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
+    {
+      "src": "/api/(.*)",
+      "dest": "backend/server.py"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
